@@ -1,0 +1,122 @@
+why ds? 
+what ds ? 
+
+
+c c++ java--> lang programs 
+
+1) space complexity 
+2) time complexity 
+
+
+addtion , max , bank app , website -> 5 users 
+
+
+50 users -> 1 5mb -> 50*5 => 250 mb  [ 50 mb ] cost low 
+         -> 10 second -> 50*second -> 500 second 
+
+DSA  + custom [ time + space ]
+    optimisation 
+
+
+panipuri -> money -> box -> 500 rs -> 70rs [ 430 ]
+
+dmart -> money -> box -> [][][][][][] -> 500 rs -> 70 rs [430]
+
+
+data store ?
+read ?
+modify ? 
+remove ? 
+
+--------------------------------------------------------------------------------------------------------
+
+
+            Linear                                  Non-Linear 
+
+1) array                                        1) tree 
+2) stack                                        2) graph  
+3) queue 
+4) linked list 
+
+*) searching 
+*) sorting 
+
+--------------------------------------------------------------------------------------------------------
+*-> time complexity 
+*-> space complexity 
+
+
+1)  Best Case => Omega 
+2)  Avg Case => Theta 
+3)  Worst Case => Big O   
+
+*Big-O [O], Omega[] , Theta 
+1) doubling -> n=2 , n=4,n=8,n=16,n=32 
+
+
+1) a, b ,c are int -> 4 byte 
+a=8000 [1]
+b=16000 [1]
+c=a+b [1]
+printf(c) [1]
+
+time-> 4second,  constant 1  -> O(1)
+space-> 12byte , constant 1  -> O(1)
+
+
+2)
+array[n] -> 5 , 10 
+for(int i=0;i<n;i++){ //0 1 2 3 4 5 6 7 8 9 
+    printf("\n%d",a[i]); // 1second * 10 => 10 second 
+}
+space ->  n->5 :: 5second , n->10::10second ,
+20 40 80 160 320  
+time -> O(n)
+
+3)
+    for(int i=1;i<=n;i++){ //1 2 3 4 5 
+        for(int j=1;j<=n;j++){ // 1 2 3 4 5  
+            printf("\n%d %d",i,j);// 25lines - 25second 
+        }
+    }
+time -> n => 5 => 5*5 25second 
+time -> n => 7 => 7*7 49second 
+time -> n => 14 => 14*14 
+time -> n => n *n => 
+
+n^2 -> n*n -> Quadratic 
+
+4) 
+    for(i=1;i<=n;i++){ //1 2 3 4 5[n] ,        1 2 3 4 5 6 7[n] , 1 2 3 4 5 6 7 8 9 10[n]
+        for(j=1;j<=n-i;j++){ //4  3  2 1 0, 6 5 4 3 2 1 0 , 9 8 7 6 5 4 3 2 1 0  
+            printf("%d ",j);
+        }
+    }
+time -> n = 5  -> n*(n-i)
+time -> n = 7 ->  n*(n-i)
+time -> n = 10 -> n*(n-i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
