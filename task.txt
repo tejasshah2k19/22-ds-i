@@ -1,0 +1,42 @@
+*) Game - Two Player 
+
+cards -> 52 [ positive numbers ]
+
+	masterDeck [ 10 5 25 22 63 63 22 9 ] 
+
+A 26				B 26 
+	 
+aDeck [10 25 63 22] 		bDeck[5 22 63  9]
+	  
+    		   battle=>10	5
+	
+       [25 63 22]			[22 63 9] 
+                10 is > 5 so a is winner for this battle 
+        [25 63 22 5 10 ]     [22 63 9]
+           
+               battle => 25 22 
+        [63 22 5 10 ]     [ 63 9]
+               Player A is Winner For This battle 
+        [63 22 5 10 22 25 ]    [63 9 ]
+
+               *battle => 63 63 
+        [22 5 10 22 25 ]    [ 9 ]
+                  draw
+               
+                battle => 22 9  
+         [  5 10 22 25 ]    [   ]
+                a is winner 
+         [5 10 22 25 9 22]   [ ] 
+                battle => 
+
+            Player A is winner of This GAME 
+             
+
+
+
+      
+
+
+
+play till either A or B has 0 card and declare winner 
+game can draw also.
