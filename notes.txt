@@ -138,6 +138,104 @@ input restricted queue              output restricted queue
 
 
 
+f=-1
+r=-1 
+
+
+pq[5]
+
+    priority => even numbers has highest priority 
+
+
+    [10 15  27  85  98]
+     f               r 
+     
+     delete => 10 98 15 27 85 
+ 
+ 
+    [10 15   27    ]
+     f       r 
+    delete =>  10 
+    [15   27    ]
+     f       r 
+    insert 30 
+     [15     27  30    ]
+     f           r
+     delete =>  30
+
+
+    
+    delete -> sort 
+     0   1  2    3   4 
+    [10 15  22  85  98]
+     f               r
+    
+    [10 22  98  15  85] [Size-1 sorting ]
+     f               r
+
+     10 
+     [X 22 98 15 85 ]
+        f        r
+    delete->sort 
+     [X X 98 15 85  9  20  ]
+           f           r
+    delete -> sort 
+
+        [X X 98 20  15 85  9    ]
+             f             r
+
+        [insert +  delete + ]
+    ----------------------------------------------------
+
+priority queue -> 
+    ----------------------------------------------------
+
+IRD 
+
+[    2 3 4    ]
+     f   r  
+insert - simple queue 
+delete  - front | rear 
+        delete beg [f] 
+        delete end [r]
+
+
+ORD - 1) insert beg 
+      2) insert end 
+      3) delete beg   
+
+[   15 11 10  2 3 4    ]
+    f             r  
+1) insert shift 
+2) insert f--  
+3) delete f++ 
+
+LinkedList 
+
+--------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
 
 
 
