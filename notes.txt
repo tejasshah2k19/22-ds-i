@@ -284,6 +284,63 @@ incomeTax :
     USERS : [      ]
              k
      
+-----------------------------------------------------------------
+
+recursion -> function calling itself 
+
+
+void main(){
+    printf("");
+    main();//recursion 
+}
+
+void add(){
+    add();//recursion
+}
+
+--------------------------------------------------------------------
+
+
+int a; // 4 byte --- stack 
+
+
+SMA --- 
+int a[500]; // 10 -> 490 
+            // 550 -> -50 
+
+
+
+DMA - memory  - pointer ---> heap 
+        i need , i will 
+        i dont need , i release 
+
+    C -> 
+            1) calloc : new 
+            2) malloc : new 
+            3) realloc : resize 
+            4) free   : release 
+
+
+calloc vs malloc 
+
+a = malloc(4); //4 byte to a --> single 
+
+x = calloc(2,4)// 2 block of 4 byte -> 2 elements  
+    calloc(count,size); 
+
+free(a);
+free(x);    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
