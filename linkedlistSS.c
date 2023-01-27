@@ -7,6 +7,8 @@ struct node
     struct node *next;        // self ref structure
 } *head = NULL, *last = NULL; // empty
 
+
+ struct node* createNode(int num); // [num | Null ]
 void addNode(int);
 void display();
 void delLast();
@@ -14,13 +16,15 @@ void delBeg();
 void search();
 void addBeg();
 void deleteAny();//ask num and delete 
+void insertAnyAfter();
+
 int main()
 {
     int choice, num;
 
     while (1)
     {
-        printf("\n0 For Exit\n1 For Add Node\n2 For Display\n3 For DeleteLast\n4 For Del Beg\n5 For Search\n6 For add Beg");
+        printf("\n0 For Exit\n1 For Add Node\n2 For Display\n3 For DeleteLast\n4 For Del Beg\n5 For Search\n6 For add Beg\n7 For inser Any After\n");
         printf("\nEnter your choice");
         scanf("%d", &choice);
 
@@ -45,6 +49,9 @@ int main()
         case 5:
             search();
             break;
+        case 7:
+            insertAnyAfter();
+            break;
         default:
             printf("\nPTA");
             break;
@@ -58,16 +65,14 @@ void addNode(int num)
     struct node *tmp;
     if (head == NULL)
     {
-        head = (struct node *)malloc(sizeof(struct node));
-        head->data = num; // .  | struct pointer arrow ->
-        head->next = NULL;
+        head =  createNode(num);
+        //head->data = num; // .  | struct pointer arrow ->
+        //head->next = NULL;
         last = head;
     }
     else
     {
-        tmp = (struct node *)malloc(sizeof(struct node));
-        tmp->data = num;
-        tmp->next = NULL;
+        tmp = createNode(num);
         last->next = tmp;
         last = tmp;
     }
@@ -145,12 +150,49 @@ void addBeg(){
     printf("\nEnter number");
     scanf("%d",&num);
 
-    tmp = malloc(sizeof(struct node));
-    tmp->data = num;
+    tmp = createNode(num);
     tmp->next = head; 
     head = tmp ;
 }
 
 void deleteAny(){
+
+}
+
+ struct node* createNode(int num){
+    struct node *tmp; 
+    tmp = malloc(sizeof(struct node));
+    tmp->data = num;
+    tmp->next = NULL;
+    return tmp;
+}
+
+void insertAnyAfter(){
+    int source,num,isFound=0;
+    struct  node *p = head,*tmp;
     
+    printf("\nEnter source node");
+    scanf("%d",&source);
+
+    while(p != NULL){
+        if(p->data == source){
+            isFound = 1;
+            break;
+        }   
+        p = p->next; 
+    }
+
+    if(isFound == 1){
+        printf("\nEnter data");
+        scanf("%d",&num);
+        tmp = createNode(num);
+        tmp->next = p->next;
+        p->next = tmp; 
+    }else{
+        printf("\nInvalid Source PTA");
+    }
+
+
+
+
 }
